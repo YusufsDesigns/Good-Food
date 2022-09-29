@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <title>Good Food - Food calorie tracker</title>
 </head>
-<body>
+<body class="bg-gray-200">
     <nav class="border-b-4 border-yellow-500 pb-2 bg-yellow-100">
         <div class="max-w-screen-xl mx-auto px-8 text-center flex items-center justify-center">
             <div class="w-20">
@@ -33,16 +33,44 @@
     <!-- form -->
     <form class="py-8 flex justify-center" id="form">
         <div class="bg-yellow-300 py-2 px-6 rounded">
-            <input type="text" placeholder="Search for food" class=" border-0 outline-none bg-yellow-300 text-yellow-900 placeholder:text-yellow-900">
+            <input type="text" placeholder="Search Food" id="search-input" class="border-0 outline-none bg-yellow-300 text-yellow-900 placeholder:text-yellow-900">
             <i class="fa-solid fa-search text-yellow-900"></i>
         </div>
     </form>
 
+    <h1 class="text-center capitalize mb-8 text-4xl text-yellow-500" id="food-type"></h1>
     <!-- List Items -->
-    <div id="collection"></div>
+    <div id="collection" class="mx-auto max-w-screen-lg px-8 space-y-8 my-4 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-y-0  md:grid-cols-3 ">
+        <!-- <div class="collection-item shadow-xl">
+            <div class="">
+                <img src="./images/side1.jpg" alt="" class="">
+            </div>
+            <div class="p-4 bg-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, porro.
+            </div>
+        </div>
+        <div class="collection-item shadow-xl">
+            <div class="">
+                <img src="./images/side1.jpg" alt="" class="">
+            </div>
+            <div class="p-4 bg-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, porro.
+            </div>
+        </div>
+        <div class="collection-item shadow-xl">
+            <div class="">
+                <img src="./images/side1.jpg" alt="" class="">
+            </div>
+            <div class="p-4 bg-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, porro.
+            </div>
+        </div> -->
+    </div>
     
 
 
-    <script src="./bundle.js"></script>
+    <script src="./js/food.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
