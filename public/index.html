@@ -10,14 +10,18 @@
     <title>Good Food - Food calorie tracker</title>
 </head>
 <body class="bg-gray-200">
-    <nav class="border-b-4 border-yellow-500 pb-2 bg-yellow-100">
-        <div class="max-w-screen-xl mx-auto px-8 text-center flex items-center justify-center">
+    <nav class="border-b-4 border-yellow-500 pb-2 bg-yellow-100 relative">
+        <div class="max-w-screen-xl mx-auto px-8 text-center flex items-center justify-start sm:justify-center">
             <div class="w-20">
                 <img src="./images/logo.png" alt="" class="w-full h-auto">
             </div>
-            <div class="uppercase text-3xl text-yellow-600">
-                Good Food
+            <div class="logo text-4xl text-yellow-600">
+                GoodFood
             </div>
+        </div>
+        <div class="absolute top-6 right-10 text-yellow-600 cursor-pointer">
+            <i class="fa-solid fa-book-open fa-2x"></i>
+            <span class="absolute -top-2 left-7 text-sm bg-yellow-300 rounded-full w-6 h-6 leading-6 text-center">0</span>
         </div>
     </nav>
     <div class="showcase relative h-40 w-full object-cover">
@@ -30,43 +34,20 @@
             </div>
         </div>
     </div>
-    <!-- form -->
-    <form class="py-8 flex justify-center" id="form">
-        <div class="bg-yellow-300 py-2 px-6 rounded">
-            <input type="text" placeholder="Search Food" id="search-input" class="border-0 outline-none bg-yellow-300 text-yellow-900 placeholder:text-yellow-900">
-            <i class="fa-solid fa-search text-yellow-900"></i>
-        </div>
-    </form>
+    <div>
+        <!-- form -->
+        <form class="py-8 flex justify-center" id="form">
+            <div class="bg-yellow-300 py-2 px-6 rounded">
+                <input type="text" placeholder="Search Food" id="search-input" class="border-0 outline-none bg-yellow-300 text-yellow-900 placeholder:text-yellow-900">
+                <i class="fa-solid fa-search text-yellow-900"></i>
+            </div>
+        </form>
 
-    <h1 class="text-center capitalize mb-8 text-4xl text-yellow-500" id="food-type"></h1>
-    <!-- List Items -->
-    <div id="collection" class="mx-auto max-w-screen-lg space-y-8 my-4 sm:grid sm:grid-cols-2 sm:gap-8 sm:px-8 sm:space-y-0  md:grid-cols-3 2xl:max-w-screen-2xl">
-        <!-- <div class="collection-item shadow-xl">
-            <div class="">
-                <img src="./images/side1.jpg" alt="" class="">
-            </div>
-            <div class="p-4 bg-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, porro.
-            </div>
-        </div>
-        <div class="collection-item shadow-xl">
-            <div class="">
-                <img src="./images/side1.jpg" alt="" class="">
-            </div>
-            <div class="p-4 bg-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, porro.
-            </div>
-        </div>
-        <div class="collection-item shadow-xl">
-            <div class="">
-                <img src="./images/side1.jpg" alt="" class="">
-            </div>
-            <div class="p-4 bg-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In, porro.
-            </div>
-        </div> -->
-        <i class="fa-solid fa-pan-food"></i>
+        <h1 class="text-center capitalize mb-8 text-4xl text-yellow-500" id="food-type"></h1>
+        <!-- List Items -->
+        <div id="collection" class="mx-auto max-w-screen-lg space-y-8 my-4 sm:grid sm:grid-cols-2 sm:gap-8 sm:px-8 sm:space-y-0  md:grid-cols-3 2xl:max-w-screen-2xl"></div>
     </div>
+    
     
 
 
