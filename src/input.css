@@ -24,5 +24,13 @@ body{
 
 .image:hover{
     transform: scale(1.2);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-out;
+}
+
+.modal{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.modal-box{
+    margin: 10% auto;
 }
