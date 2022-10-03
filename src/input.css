@@ -28,9 +28,33 @@ body{
 }
 
 .modal{
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
+    animation: modalopen 0.5s;
 }
 
-.modal-box{
+.calc-modal,
+.list-modal{
     margin: 10% auto;
+}
+
+@keyframes modalopen{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
 }
