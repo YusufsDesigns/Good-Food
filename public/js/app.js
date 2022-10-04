@@ -70,25 +70,33 @@ const data = {
 // Add items to list modal
 modal.addEventListener('mousedown', (e) => {
     if (e.target.id === 'add-to-total'){
+        // Constructor function
         const Item = function(name, calories, servings){
             this.name = name;
             this.calories = calories;
             this.servings = servings;
         }
 
+        // Get food name on mousedown
         const foodName = e.target.parentElement.previousElementSibling.childNodes[1].textContent;
+        // Get total calories and servings on mousedown
         const calories = calculateTotalCalories(e).totalCalories;
         const servings = calculateTotalCalories(e).servings;
 
+        // Set name, calories and servings to the constructor
         item = new Item(foodName, calories, servings);
 
+        // Push new items to data structure
         data.items.push(item);
 
+        // Calculate grand total calories
         calculateGrandTotalCalories();
 
+        // Disable button on mousedown
         calcBtn.value = 'Total added'
         calcBtn.disabled = true; 
 
+        // Display new items
         ui.listModal(data.items)
 
         // Add number of items to list box link & icon
@@ -138,19 +146,19 @@ listModal.addEventListener('click', (e) => {
 function fetchFoodContents(e){
     // Get Food
     const foodItem = document.getElementById('search-input').value;
-    console.log(foodItem);
 
     // Check if input is empty
-    if(e.target === ''){
+    if(foodItem === ''){
         ui.showError('Add a food item');
     } else{
         // Fetch food from API
         food.getFood(foodItem)
         .then(food => {
             if(food.more === false){
-                ui.showError('Not Available');
+                ui.showError('Food item not available');
+                ui.clearList();
+                foodType.textContent = '';
             } else{
-                console.log(food);
                 // Display food type
                 foodType.textContent = food.q;
     

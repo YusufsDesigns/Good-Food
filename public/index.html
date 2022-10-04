@@ -36,11 +36,12 @@
     </div>
     <div>
         <!-- form -->
-        <form class="py-8 flex justify-center" id="form">
+        <form class="py-8 flex justify-center flex-col items-center" id="form">
             <div class="bg-yellow-300 py-2 px-6 rounded">
                 <input type="text" placeholder="Search Food" id="search-input" class="border-0 outline-none bg-yellow-300 text-yellow-900 placeholder:text-yellow-900 focus:bg-yellow-300">
                 <i class="fa-solid fa-search text-yellow-900 cursor-pointer search-btn"></i>
             </div>
+            <div class="before"></div>
         </form>
 
         <h1 class="text-center capitalize mb-8 text-4xl text-yellow-500" id="food-type"></h1>
@@ -49,7 +50,7 @@
     </div>
     <!-- Modal -->
     <div class="modal w-full h-full fixed top-0 left-0 z-10 px-8 hidden">
-        <div class="calc-modal bg-white max-w-sm w-full h-auto mx-auto rounded-md px-4 py-8 space-y-3 relative">
+        <div class="calc-modal bg-white max-w-md w-full h-auto mx-auto rounded-md px-4 py-8 space-y-3 relative">
             <i class="fa-solid fa-circle-xmark fa-2x absolute top-3 right-5 text-yellow-600 cursor-pointer close-btn"></i>
             <div class="flex flex-col items-start space-y-1">
                 <span class="food-name font-bold"></span>
@@ -58,14 +59,14 @@
             <form id="calc-serving" class="space-y-8">
                 <div>
                     <label for="servings" class="block text-sm text-yellow-900 mb-1">Serving(s)</label>
-                    <input type="number" id="servings" class="border-0 outline-none bg-yellow-200 text-yellow-900 py-2 px-4 rounded w-2/6 text-sm text-right">
+                    <input type="number" id="servings" class="border-0 outline-none bg-yellow-200 text-yellow-900 py-2 px-4 rounded w-3/6 text-sm text-right">
                 </div>
                 <div class="total-calories text-center font-semibold uppercase"></div>
                 <input type="submit" id="calc-btn" value="Calculate" class="bg-yellow-300 uppercase rounded-md py-2 w-full text-yellow-900 cursor-pointer">
             </form>
             <div class="my-4 text-center text-sm text-yellow-900 cursor-pointer list-box-link">View My Totals (<span class="totals">0 </span> Item(s))</div>
         </div>
-        <div class="list-modal bg-white max-w-sm w-full h-auto mx-auto rounded-md px-4 py-8 space-y-4 relative hidden">
+        <div class="list-modal bg-white max-w-md w-full h-auto mx-auto rounded-md px-4 py-8 space-y-4 relative hidden">
             <i class="fa-solid fa-circle-xmark fa-2x absolute top-3 right-5 text-yellow-600 cursor-pointer close-btn"></i>
             <span class="font-bold text-lg">My Totals</span>
             <div class="item-list space-y-2 border-b-2 border-dotted border-yellow-600 pb-4">
@@ -78,8 +79,8 @@
     
 
 
-    <script src="./js/food.js"></script>
     <script src="./js/storage.js"></script>
+    <script src="./js/food.js"></script>
     <script src="./js/ui.js"></script>
     <script src="./js/app.js"></script>
 </body>

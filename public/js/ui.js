@@ -3,6 +3,7 @@ class UI{
         this.collection = document.getElementById('collection');
         this.inputValue = document.getElementById('search-input').value;
         this.list = document.querySelector('.item-list');
+        this.alert = document.querySelector('.alert');
     }
 
     paint(data){
@@ -52,7 +53,30 @@ class UI{
     clearInput(){
         document.getElementById('search-input').value = '';
     };
-    showError(){
+    showError(msg){
+        // Create a Div
+        const errorDiv = document.createElement('div');
 
+        // Get elements
+        const form = document.getElementById('form');
+        const before = document.querySelector('.before');
+
+        // Add class
+        errorDiv.className = 'alert text-red-600 text-center my-2'
+
+        // Create text node and append to div
+        errorDiv.appendChild(document.createTextNode(msg));
+
+        // Inser error above heading
+        form.insertBefore(errorDiv, before);
+
+        // clear error after 3 seconds
+        setTimeout(this.clearError, 4000);
+        };
+    clearError(){
+        document.querySelector('.alert').remove();
+    };
+    clearList(){
+        this.collection.innerHTML = '';
     }
 }
